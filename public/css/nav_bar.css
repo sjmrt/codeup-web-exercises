@@ -1,0 +1,36 @@
+body {
+	background-color: lightblue;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	float: left;
+}
+
+nav a:link {
+	text-decoration: none;
+	font-size: 18px;
+}
+
+nav a {
+	display: block;
+	width: 120px;
+	background-color: lightpink;
+	border: 3px solid yellow;
+	font-family: sans-serif;
+	text-align: center;
+	border-radius: 15px;
+}
+
+nav a:hover {
+	background-color: lightyellow;
+}
+
+nav a:visited {
+	color: purple;
+}

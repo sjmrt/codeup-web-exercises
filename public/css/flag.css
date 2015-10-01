@@ -1,0 +1,23 @@
+.container {
+  width: 250px;
+  height: 180px;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 1px #CCC;
+  background-color: #FF0000;
+}
+
+.bluesquare1 {
+	height: 70px;
+	width: 70px;
+	float: left;
+	background-color: blue;
+}
+
+.bluesquare2 {
+	height: 70px;
+	width: 70px;
+	float: left;
+	position: relative;
+	top: 70px;
+	background-color: blue;
+}
