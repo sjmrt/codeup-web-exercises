@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Berets</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+	var names = ["Ringo", "Paul", "George", "TheOtherGuy"];
+	console.log('There are ' + names.length + ' names in the array');
+
+	
+	for(var i = 0; i < names.length; i+=1){
+		console.log(names[i]);
+	}
+	
+
+	for(var i = 0; i < names.length; i +=1) {
+		console.log('The name at index ' + i + ' is ' + names[i]);
+	}
+
+	names.forEach(function (element, index, array) {
+		console.log('The name at index ' + index + ' is ' + element);
+	});
+
+
+	function iterateNames(element, index, array){
+		console.log('The name at index ' + index + ' is ' + element);
+	}
+	names.forEach(iterateNames);
+
+
+	var tacos =['chorizo', 'picadillo', 'guacamole', 'barbacoa'];
+
+	tacos.forEach(function (taco, index, array) {
+		if(index > 0) {
+			console.log('The Last taco I ate was a ' + array[index -1]);
+		}
+		console.log('I am eating a ' + taco + ' taco');
+		if(index < array.length -1){
+			console.log('I will eat a ' + array[index + 1] + ' taco next');
+		}
+		console.log('yum');
+	});
+
+
+	var names = ['Ringo', 'Paul', 'jack',];
+	var greetings = []
+
+	names.forEach(function (element, index, array) {
+		greetings[index] = 'Hi there, ' + element;
+	});
+
+	greetings.forEach(function (element, index, array) {
+		console.log('The value "element" ' + element + ' is at index ' + index + ' which is the same as ' + array[index])
+	});
+
+
+	</script
+</body>
+</html>

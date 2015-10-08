@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Interaction</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	var prompted = prompt('What is your name?')
+	
+	while(prompted === "" || prompted === null) {
+		prompted = prompt('No really, tell me your name');
+	}
+	alert('Welcome to the Jungle ' + prompted);
+
+
+	var confirmed = confirm('Do you like pizza?')
+	if (confirmed){
+		alert('Cowabunga! ' + prompted)
+	}
+
+	</script>
+
+</body>
+</html>

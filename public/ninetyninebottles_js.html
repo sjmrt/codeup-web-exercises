@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>99 Bottles</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		for(var i = 9; i <= 10; i++) {
+			
+			for(var j = 0; j<=10; j++) {
+				console.log(i * j);
+				console.log('inner loop');
+			}
+			
+			console.log('outer loop');
+		}
+
+
+
+		var i = 99;
+		while (i > 0) {
+			console.log (i + " bottles of beer on the wall, " + i + " bottles of beer. Take one down and pass it around, " + (i-1) + " bottles of beer on the wall.");
+			i--;
+		}
+		if (i = 0) {
+			console.log("0 bottles of beer on the wall, 0 bottles of beer. Go to the store and buy some more, 0 bottles of beer on the wall.")
+		}
+
+//Ryan's other way//
+
+		for(var number = 99; number >=1; number-=1){
+
+			if(number ==1) {
+				console.log(number + ' bottles of beer on the wall. Take one down, pass it around.');
+			} else {
+				console.log(number + ' bottle of beer on the wall. Take it down and pass it around');
+			}
+		}
+		console.log('No bottles of beer on the wall, no bottles of beer. Go to the store and buy some more, no bottles of beer on the wall.');
+		console.log(number);
+		
+
+
+
+//Ryan's version//
+
+		var number = 99;
+
+		while(number >= 1) {
+			console.log(number + ' bottles of beer on the wall. Take one down, pass it around.')
+			number-=1;
+
+			if(number ==1) {
+				console.log(number + ' bottle of beer on the wall. Take it down and pass it around');
+			} else { 
+				console.log(number + ' bottles of beer on the wall. Take one down, pass it around.');
+			}
+
+			number -=1;
+
+		}
+
+		console.log('No bottles of beer on the wall, no bottles of beer. Go to the store, buy some more. No bottles of beer on the wall.');
+		console.log(number);
+	</script>
+
+
+</body>
+</html>

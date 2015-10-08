@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shape Areas</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+		function rectangleArea(width, height) {
+			var area = width * height
+			return area;
+		}
+		console.log(rectangleArea( 1,2 ));
+
+
+
+		function circleArea(radius) {
+			var area = radius * radius * 3.14159;
+			return area;
+		}
+
+		console.log(circleArea( ) );
+
+
+		function circlePerimeter(radius){
+
+			var perimeter = 3.14159 * 3.14159 * radius;
+			return perimeter;
+		}
+		console.log(circlePerimeter( ) );
+
+
+		function triangleArea(base, height) {
+			var area = .5 * base * height;
+			return area;
+		}
+		console.log(triangleArea() );
+
+// Cameron's trap //
+		var side1 = 8;
+		var side2 = 9;
+		var side3 = 15;
+
+		function areaOfRectangle(side1, side2){
+			return side1 * side2;
+		}
+		function areaOfRightTriangle(base,height){
+			return (base * height) /2;
+		}
+		function areaOfShadedTrap(area1, area2){
+			return area1 - area2;
+		}
+		var area1 = areaOfRectangle(side1, side3);
+		var area2 = areaOfRightTriangle(side1, side2);
+		console.log(area1);
+		console.log(area2);
+		console.log(areaOfShadedTrap(area1, area2));
+
+//cameron's star of david//
+
+		var sideOfEqualTri = 4
+
+		function areaOfEqualTri(side){
+			return (Math.sqrt(3) / 4) * (Math.pow(side, 2));
+		}
+		function areaOfHexagon(side) {
+			return ((3 * Math.sqrt(3)) /2) * (Math.pow(side, 2));
+		}
+
+		var areaOfStarOfDavid = (areaOfEqualTri(sideOfEqualTri) * 6);
+		console.log(areaOfStarOfDavid)
+
+
+
+
+		function trapezoidArea(triangle, rectangle) {
+			var area = rectangle - triangle;
+			return area;
+		}
+		console.log(trapezoidArea());
+
+		function pythagorean(a, b){
+			var hypotenuse = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+			return hypotenuse;
+		}
+
+		
+
+	</script>
+
+</body>
+</html>

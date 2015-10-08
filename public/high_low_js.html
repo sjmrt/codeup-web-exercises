@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>High/Low Guessing Game</title>
+	<script type="text/javascript">
+//		var ranNum;
+//		function playGame ( ) {
+//  		var answer = prompt("Guess a number between 1 and 50!");
+//  		if(answer > ranNum) { alert("¡Mas abajo!"); }
+// 		if(answer < ranNum) { alert("¡Mas arriba!"); }
+//  		if(answer == ranNum) { alert("¡Correcto!"); return true; }
+//  		return false;
+//		}
+//		function genRanNumber() {
+//		  ranNum = Math.floor(Math.random()*50)+1;
+//		}
+//		window.onload = function() { genRanNumber(); }
+// <=====This part outside of script ======>
+// <h1>Sj's High Low Game</h1>
+
+//	<input type="button" value="Play game" onclick="playGame()"> 
+//	<input type="button" value="New game" onclick="genRanNumber()"> 
+//	</script>
+</head>
+<body>
+	
+
+
+	<h1>Ryan's High Low Game</h1>
+
+<input type="button" value="Play game" onclick="playGame()"> 
+
+	<script type="text/javascript">
+	
+		function getRandomNumber() {
+			var rand = Math.floor((Math.random() * 50) + 1);
+			return rand;
+		}
+		function playAgain(){
+			var answer = confirm('Do you want to play again?');
+			return answer;
+		}
+		function getGuess(){
+			var guess = prompt('Please enter your guess between 1 and 50')
+			return guess;
+		}
+		function isValidGuess(guess){
+			var parsedGuess = parseInt(guess);
+			if(isNaN(parsedGuess)){
+				return false;
+			} else{
+				return true;
+			}
+		}
+		function getValidGuess() {
+			do {
+				var guess = getGuess();
+			} while(isValidGuess(guess) == false);
+			return guess;
+		}
+
+		function playGame() {
+		
+			var random = getRandomNumber();
+			var i = 0
+			do{
+				var guess = getValidGuess();
+
+				if(guess == random){
+					alert('You did it!');
+				} else if(guess > random) {
+					alert('Too High');
+				} else if(guess < random) {
+					alert('Too Low');
+				}
+				i = i + 1
+
+			} while(random != guess && i < 5);
+			
+		}
+
+		do {
+			playGame();
+			var replay = playAgain();
+		}while(replay);
+
+	</script>
+
+
+</body>
+</html>
+
