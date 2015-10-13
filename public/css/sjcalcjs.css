@@ -1,0 +1,20 @@
+.calcDisplay{
+	width: 288px;
+	align: center;
+}
+.calcForm {
+    width: 300px;
+}
+
+.calcButton {
+	width: 70px;
+	float: left;
+	margin: 2px;
+	height: 40px;
+	font-weight: bold;
+}
+
+.clearButton {
+	width: 294px;
+}
+

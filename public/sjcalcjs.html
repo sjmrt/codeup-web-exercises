@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+  
+            <link rel="stylesheet" href="css/sjcalcjs.css" />
+        </head>
+        <body>
+        <form class="calcForm" name="calculator">
+            <input type="text" class="calcDisplay" id="display" />
+
+            <div class="calcRow">
+                <input type="button" class="calcButton number" value="7" />
+                <input type="button" class="calcButton number" value="8" />
+                <input type="button" class="calcButton number" value="9" />
+                <input type="button" class="calcButton operator" value="+" />
+            </div>
+            <div class="calcRow">
+                <input type="button" class="calcButton number" value="4" />
+                <input type="button" class="calcButton number" value="5" />
+                <input type="button" class="calcButton number" value="6" />
+                <input type="button" class="calcButton operator" value="-" />
+            </div>
+
+            <div class="calcRow">
+                <input type="button" class="calcButton number" value="1" />
+                <input type="button" class="calcButton number" value="2" />
+                <input type="button" class="calcButton number" value="3" />
+                <input type="button" class="calcButton operator" value="*" />
+            </div>
+
+            <div class="calcRow">
+                <input type="button" class="calcButton number" value="0" />
+                <input type="button" id ="decimal" class="calcButton" value="." />
+                <input type="button" class="calcButton operator" value="/" />
+                <input type="button" id="equalsbutton" class="calcButton" value="="/>
+                <input type="button" id="clear" class="clearButton" value="CLEAR"/>
+            </div>
+        </form>
+        <script src=js/sjcalcjs.js type="text/javascript"></script>
+    </body>
+</html>
