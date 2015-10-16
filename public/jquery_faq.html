@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>National Park FAQs</title>
+
+	<style type="text/css">
+
+		.invisible{
+			display: none;
+		}
+
+		.title{
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>U.S. National Park FAQs</h1>
+
+	<dl>
+		<dt class="title"><a href="#">How much land has been set aside for National Parks?</a></dt>
+		<dd class="invisible">51 million acres! About the size of Kansas</dd>
+		
+		<dt class="title"><a href="#">What was the world's first National Park?</a></dt>
+		<dd class="invisible">Yellowstone, created in 1872 by President Ulysses S. Grant. Cared for by the calvary.</dd>
+		
+		<dt class="title"><a href="#">What was the first cave to be delcared a National Park?</a></dt>
+		<dd class="invisible"> Wind Cave, the sixth longest cave in the world!</dd>
+		
+		<dt class="title"><a href="#">What is the smallest National Park?</a></dt>
+		<dd class="invisible">Hot Springs National Park is only 5,500 acres!</dd>
+		
+		<dt class="title"><a href="#">How is a National Park chosen?</a></dt>
+		<dd class="invisible">National Parks are chosen for their natural beauty, unique geological features, and unusual ecosystems.</dd>
+		
+		<dt class="title"><a href="#">What states do NOT have National Parks?</a></dt>
+		<dd class="invisible">The only state without a National Park or Monument is the country's first state, Delaware.</dd>
+		
+		<dt class="title"><a href="#">What National Park has the lowest elevation?</a></dt>
+		<dd class="invisible">Death Valley National Park, with 282 ft below sea level.</dd>
+		
+		<dt class="title"><a href="#">What National Park is considered a great mystery?</a></dt>
+		<dd class="invisible">Scientists have debated whether the Grand Canyon was a gorge in which a river came to, or which it was carved by.</dd>
+		
+		<dt class="title"><a href="#">What National Park has the deepest water?</a></dt>
+		<dd class="invisible">Crater Lake took 250 years of rain and snow accumulation to reach it's current level as U.S.' deepest lake!</dd>
+		
+		<dt class="title"><a href="#">What is the largest National Park?</a></dt>
+		<dd class="invisible">Wrangell - St. Elias National Park in Alaska has an area of over 8.3 million acres and is larger than each of the nine smallest states.</dd>
+	</dl>
+
+	<h1>Parks List</h1>
+
+    <h3>National Parks</h3>
+
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+
+    <h3>State Parks of Texas</h3>
+
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+
+    <h3>Novels Set in US National parks</h3>
+
+    <ul id="novels-set-in-parks">
+    	<li>Somewhere Upriver</li>
+    	<li>Track of the Cat</li>
+    	<li>Caldera</li>
+    	<li>Letters From Yellowstone</li>
+    	<li>Blind Descent</li>
+    </ul>
+
+<script src="/js/jquery.js"></script>
+<script>
+	"use strict";
+
+    $(document).ready(function() {
+
+        $('dl').addClass('dl-hover');
+		$('dt').addClass('dt-hover');
+
+		$('dt').on('click', function() {
+			$(this).next('dd').slideToggle();
+		});
+
+
+    	$('ul').each(function() {
+			$(this).children('li:first').css('font-weight', 'bold');
+		});
+
+		$('li').on('click', function() {
+			$(this).parent('ul').addClass('invisible');
+		});
+
+	});
+
+</script>
+
+</body>
+</html>
