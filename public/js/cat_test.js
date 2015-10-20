@@ -1,21 +1,15 @@
 
 $(document).ready(function() {
 
-	$("h1").click(function() {
-		$(this).css('background-color', 'blue');
+	$("name").keydown(function(e){
+		console.log(e.which);
 	});
-
-	$("p").dblclick(function() {
-		$(this).css('font-size', '18px');
-	});
-
-	$("li").hover(
-		function() {
-			$(this).css('color', 'red');
-		},
-		function() {
-			$(this).css('color', 'black');
-		}
-	);
 
 });
+
+
+('#nav-links').on('click', 'a', function(e) {
+	e.preventDefault();
+
+	$(this)
+})

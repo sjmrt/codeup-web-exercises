@@ -19,6 +19,8 @@
             position: relative;
             width: 250px;
             border-radius: 50%;
+            border: 10px;
+            background-color: aquamarine;
         }
     </style>
 </head>
@@ -48,7 +50,7 @@
         // TODO: "Scale It" should expand the box width by 50%
         $('#btn-scale').click(function() {
         	$('#animate-box').animate({
-        		width: "50%"
+        		width: "375px"
         	}, 500);
         });
 
@@ -69,18 +71,19 @@
         //      1) Move and scale the box simultaneously
         //      2) Hide the box
         //      3) Reset the box back to its original position and opacity
+
     	$('#btn-all').click(function(){
     		$('#animate-box').animate({
     			right: "+100",
-    			width: "50%"
-    		}, 2000).animate({
+    			width: "375px"
+    		}, 500).animate({
     			opacity: "0"
-    		}, 2000).animate({
-    			right: "-25",
+    		}, 500).animate({
+    			right: "-18",
     			height: "250px",
     			width: "250px",
     			opacity: "1"
-    		}, 2000);
+    		}, 500);
     	});
     });
     </script>

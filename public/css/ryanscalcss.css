@@ -1,0 +1,10 @@
+button {
+	width: 90px;
+	float: left;
+	margin: 2px;
+	height: 40px;
+}
+
+.calculator {
+	width: 410px;
+}

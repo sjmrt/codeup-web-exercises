@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+
+</head>
+
+<body>
+
+    <img src="/img/contra.jpg" id="background" alt="" style="width:100%;height:100%">
+
+    <script src="/js/jquery.js"></script>
+
+    <script>
+        
+        $(document).ready(function() {
+
+    		var keys = [], 
+    		konami = "38,38,40,40,37,39,37,39,66,65,13";
+
+   			$(document).keyup(function(event){
+
+        		keys.push(event.keyCode);
+                console.log("you pressed " + event.keyCode);
+
+        		if ( keys.toString().indexOf( konami ) >= 0 ){
+        			alert('You have added 30 lives!')
+        		} else if (konami.indexOf(keys.toString()) != 0) {
+                	alert("you didn't follow the right pattern");
+                	keys = [];
+            	}
+            });
+        });
+        
+    </script>
+</body>
+</html>

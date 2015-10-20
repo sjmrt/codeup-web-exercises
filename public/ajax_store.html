@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 
 <html><head>
-    <title>Online Store</title>
+    <title>Ajax Store</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">    
+<link rel="stylesheet" href="/cvstrap/css/style.css">
+<link rel="stylesheet" href="/css/mystore.css">
 </head>
 <body>
-<link href="/css/mystore.css" rel="stylesheet"></link>
+<div class="container">
 <h1>My Tool Store</h1>
+<hr>
 
-<table id="products">
+<table id="products" class="table, table-bordered">
     <thead>
         <tr>
             <th class="table">Title</th>
@@ -26,7 +30,7 @@
 (function() {
 	function updateStore(){
 		$.get("/data/inventory.json")
-	    // TODO: Create an ajax GET request for /data/inventory.json
+
 	    
 	    var inventory = $.get("/data/inventory.json")
 
@@ -53,13 +57,9 @@
     });
 
     $(document).ready(updateStore);
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+
 })();
 </script>
-
-
-
-<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1295</span> x <span class="tooltipHeight" id="winHeight">850</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1295</span> x <span class="tooltipHeight" id="vpHeight">501</span></div></body></html>
+</div>
+</body>
+</html>

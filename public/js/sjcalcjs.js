@@ -1,3 +1,6 @@
+(function(){
+
+
 function clearDisplay() {
     var display = document.getElementById('display');
     display.value = '0';
@@ -87,3 +90,4 @@ if ('addEventListener' in window)
     window.addEventListener('load', clearDisplay);
 else
     window.attachEvent('onload', clearDisplay);
+})();
