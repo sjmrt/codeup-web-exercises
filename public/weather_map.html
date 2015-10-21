@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OpenWeatherMap</title>
+	<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/openmap.css">
+</head>
+
+<body>
+  	<div id="floating-panel">
+      	<input id="address" type="textbox" value="San Antonio, TX">
+      	<input id="submit" type="button" value="Geocode">
+    </div>
+<div id="container">	
+	<div class="firstweek">
+  		<div class="row seven-cols">
+    		<div class="col-md-1">Saturday</div>
+    		<div class="col-md-1">Sunday</div>
+    		<div class="col-md-1">Monday</div>
+    		<div class="col-md-1">Tuesday</div>
+    		<div class="col-md-1">Wednesday</div>
+    		<div class="col-md-1">Thursday</div>
+    		<div class="col-md-1">Friday</div>
+  		</div>
+  	</div>
+
+</div>
+
+
+<div id="map"></div>
+<script src="/js/moment.js"></script>
+
+<script src="/js/jquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY650nWJCJxZFHl2XNALwh0WRDAqiUrX8"></script>
+
+
+<script>
+// function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: 29.4267, lng: -98.5000}
+  });
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+// }
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+
+$.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}", {
+	APPID: "07ff80caae44395d68121103ab36f2c0",
+	lat: 29.4167,
+	lon: -98.5000,
+	units: "imperial",
+}).done(function(data) {
+	console.log(data);
+});
+
+
+</script>
+
+</body>
+
+</html>
