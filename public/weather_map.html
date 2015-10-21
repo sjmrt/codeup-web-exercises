@@ -16,13 +16,27 @@
 <div id="container">	
 	<div class="firstweek">
   		<div class="row seven-cols">
-    		<div class="col-md-1">Saturday</div>
-    		<div class="col-md-1">Sunday</div>
-    		<div class="col-md-1">Monday</div>
-    		<div class="col-md-1">Tuesday</div>
-    		<div class="col-md-1">Wednesday</div>
-    		<div class="col-md-1">Thursday</div>
-    		<div class="col-md-1">Friday</div>
+    		<div class="col-md-1">Saturday
+    			<div id="day1"></div>
+    		</div>
+    		<div class="col-md-1">Sunday
+    			<div id="day2"></div>
+    		</div>
+    		<div class="col-md-1">Monday
+    			<div id="day3"></div>
+    		</div>
+    		<div class="col-md-1">Tuesday
+    			<div id ="day4"></div>
+    		</div>
+    		<div  class="col-md-1">Wednesday
+    			<div id ="day5"></div>
+    		</div>
+    		<div  class="col-md-1">Thursday
+    			<div id ="day6"></div>
+    		</div>
+    		<div  class="col-md-1">Friday
+    			<div id ="day7"></div>
+    		</div>
   		</div>
   	</div>
 
@@ -65,15 +79,34 @@ function geocodeAddress(geocoder, resultsMap) {
 }
 
 
-$.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}", {
-	APPID: "07ff80caae44395d68121103ab36f2c0",
-	lat: 29.4167,
-	lon: -98.5000,
-	units: "imperial",
-}).done(function(data) {
-	console.log(data);
-});
+function weather(lat, lon){
+	$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+		APPID: "07ff80caae44395d68121103ab36f2c0",
+		lat: lat,
+		lon: lon,
+		units: "imperial",
+		cnt: 7
+	}).done(function(data) {
+		console.log(data);
 
+		var htmlString;
+
+		data.list.forEach(function(day, i){
+			htmlString = '<p> Max: ' + day.temp.max + '</p>';
+			htmlString += '<p> Min: ' + day.temp.min +'</p>';
+			htmlString += '<p><strong>' + day.weather[0].main + '</strong></p>';
+			htmlString += '<p>' + day.weather[0].description + '</p>';
+			
+			$('#day' + (i + 1)).html(htmlString);
+		});
+
+
+	});
+
+
+}
+
+weather(24.4267, -98.5000);
 
 </script>
 
