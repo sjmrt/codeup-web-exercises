@@ -1,11 +1,12 @@
 body {
-	background-color: powderblue;
+	background-image: url(/img/rainbowweather.png);
 }
 #container {
 	background-color: steelblue;
     padding: 40px 45px;
     margin: 10px auto;
     border: 1px solid #a5d4fc;
+    width: 80%;
 }
 
 @media (min-width: 768px) {
@@ -39,12 +40,13 @@ html, body {
 }
 #map {
     height: 60%;
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 #floating-panel {
   position: relative;
-  top: 300px;
+  top: 360px;
   z-index: 5;
   background-color: #fff;
   padding: 5px;
@@ -53,4 +55,6 @@ html, body {
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
+  margin: auto;
+  width: 20%
 }

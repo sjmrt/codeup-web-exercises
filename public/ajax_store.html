@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 
-<html><head>
+<html>
+<head>
+
     <title>Ajax Store</title>
+
 <link href="css/bootstrap.min.css" rel="stylesheet">    
 <link rel="stylesheet" href="/cvstrap/css/style.css">
 <link rel="stylesheet" href="/css/mystore.css">
+
 </head>
+
 <body>
+
 <div class="container">
+
 <h1>My Tool Store</h1>
+
 <hr>
 
-<table id="products" class="table, table-bordered">
+<table id="products" class="table-bordered">
     <thead>
         <tr>
             <th class="table">Title</th>
@@ -27,11 +35,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
+
 (function() {
 	function updateStore(){
 		$.get("/data/inventory.json")
-
-	    
+  
 	    var inventory = $.get("/data/inventory.json")
 
 	    inventory.done(function(data){
@@ -41,9 +49,9 @@
 	    	$(data).each(function(index, product){
 	    		htmlString += '<tr>'
 	    		htmlString += '<td>'+ product.title +'</td>'
-	    		htmlString += '<td>'+ product.quantity +'</td>'
-	    		htmlString += '<td>'+ product.price +'</td>'
-	    		htmlString += '<td>'+ product.categories +'</td>'
+	    		htmlString += '<td class="alnright">'+ product.quantity +'</td>'
+	    		htmlString += '<td class="alnright">'+ product.price +'</td>'
+	    		htmlString += '<td class="alncenter">'+ product.categories +'</td>'
 	    		htmlString += '</tr>'
 	    	});
 

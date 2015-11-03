@@ -1,6 +1,18 @@
 table, th, td, tr {
 	border: 1px solid lightgray;
 }
-table{
+.table{
 	width: 600px;
+	border-spacing: 25px 30px;
+}
+th{
+	font-weight: bolder;
+}
+
+.alnright{
+	text-align: right;
+}
+
+.alncenter{
+	text-align: center;
 }

@@ -16,25 +16,25 @@
 <div id="container">	
 	<div class="firstweek">
   		<div class="row seven-cols">
-    		<div class="col-md-1">Saturday
+    		<div class="col-md-1">
     			<div id="day1"></div>
     		</div>
-    		<div class="col-md-1">Sunday
+    		<div class="col-md-1">
     			<div id="day2"></div>
     		</div>
-    		<div class="col-md-1">Monday
+    		<div class="col-md-1">
     			<div id="day3"></div>
     		</div>
-    		<div class="col-md-1">Tuesday
+    		<div class="col-md-1">
     			<div id ="day4"></div>
     		</div>
-    		<div  class="col-md-1">Wednesday
+    		<div  class="col-md-1">
     			<div id ="day5"></div>
     		</div>
-    		<div  class="col-md-1">Thursday
+    		<div  class="col-md-1">
     			<div id ="day6"></div>
     		</div>
-    		<div  class="col-md-1">Friday
+    		<div  class="col-md-1">
     			<div id ="day7"></div>
     		</div>
   		</div>
@@ -51,6 +51,8 @@
 
 
 <script>
+
+
 // function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
@@ -92,8 +94,10 @@ function weather(lat, lon){
 		var htmlString;
 
 		data.list.forEach(function(day, i){
-			htmlString = '<p> Max: ' + day.temp.max + '</p>';
-			htmlString += '<p> Min: ' + day.temp.min +'</p>';
+
+			htmlString = '<p>' + moment(data.list.dt).format('ddd') + '</p>';
+			htmlString += '<img src="http://openweathermap.org/img/w/' + day.weather[0].icon + '.png">';
+			htmlString += '<h3><p>' + Math.round(day.temp.max) + "°/" + Math.round(day.temp.min)  + '°</h3></p>';
 			htmlString += '<p><strong>' + day.weather[0].main + '</strong></p>';
 			htmlString += '<p>' + day.weather[0].description + '</p>';
 			
