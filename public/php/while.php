@@ -1,10 +1,12 @@
 <?php
 
-$test = 5;
+$test = 1;
 
-while ($test <= 15) {
-	echo $test . PHP_EOL;
-	$test++;
+while ($test <= 100) {
+	if($test % 2 == 0) {
+		echo $test . PHP_EOL;
+	}
+	$test+=1;
 }
 
 ?>
