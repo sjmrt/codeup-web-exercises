@@ -7,13 +7,13 @@
  if ($a < $b) {
      echo "$a is less than $b\n";
  } else {
-     echo "$b is greater than $a\n";
+     echo "$a is greater than $b\n";
  }
 
  if ($b >= $c) {
      echo "$b is greater than or equal to $c\n";
  } else {
-     echo "$b is less than or equal to $c\n";
+     echo "$b is not greater than or equal to $c\n";
  }
 
  if ($b === $c) {
