@@ -1,13 +1,13 @@
 <?php
 
-$number = 1;
+$number = 100;
 
 do { 
-	if( $number % 2 == 0){
+	if( $number % 5 == 0){
 		echo $number.PHP_EOL;
 	}
-	$number++;
+	$number--;
 
-} while ($number <= 100);
+} while ($number >= -10);
 
 ?>
