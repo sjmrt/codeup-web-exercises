@@ -1,16 +1,16 @@
 <?php
 
-fwrite(STDOUT, 'Please pick a starting number ');
-$start = fgets(STDIN);
+ fwrite(STDOUT, 'Please pick a starting number ');
+ $start = trim(fgets(STDIN));
 
-fwrite(STDOUT, 'Please pick an ending number ');
-$end = fgets(STDIN);
+ fwrite(STDOUT, 'Please pick an ending number ');
+ $end = trim(fgets(STDIN));
 
-fwrite(STDOUT, 'Please pick an incrementer ');
-$increment = fgets(STDIN);
+ fwrite(STDOUT, 'Please pick an incrementer ');
+ $increment = trim(fgets(STDIN));
 
 
-for ($number = $start ; $number <= $end; $number = $number + $increment)
+for ($number = $start; $number <= $end; $number += $increment)
 {
     if ($number % 3 == 0 && $number % 5 == 0) {
         echo "FizzBuzz" . PHP_EOL;

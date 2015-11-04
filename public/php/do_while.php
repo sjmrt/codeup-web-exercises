@@ -1,13 +1,12 @@
 <?php
 
-$number = 100;
+$a = 2;
 
 do { 
-	if( $number % 5 == 0){
-		echo $number.PHP_EOL;
-	}
-	$number--;
+	echo ($a) . PHP_EOL;
+	
+	$a = $a*$a;
 
-} while ($number >= -10);
+} while ($a < 1000000);
 
 ?>
