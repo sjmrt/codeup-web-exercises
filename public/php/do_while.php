@@ -3,8 +3,11 @@
 $number = 1;
 
 do { 
-	echo $number;
-	$number++
-} while ($number % 2 == 0);
+	if( $number % 2 == 0){
+		echo $number.PHP_EOL;
+	}
+	$number++;
+
+} while ($number <= 100);
 
 ?>
