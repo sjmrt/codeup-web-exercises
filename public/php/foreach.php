@@ -11,5 +11,11 @@ $things = array(
 	(string) 11);
 
 foreach($things as $value){
-	var_dump($value);
+	if(is_scalar($value)){
+		echo "$value" . PHP_EOL;
+	} elseif(is_array($value)){
+		foreach($value as $arrays){
+			echo "$arrays" . PHP_EOL;
+		}
+	}
 }
