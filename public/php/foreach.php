@@ -11,7 +11,5 @@ $things = array(
 	(string) 11);
 
 foreach($things as $value){
-	if (is_scalar($value)){
-		var_dump($value);
-	}
+	var_dump($value);
 }
