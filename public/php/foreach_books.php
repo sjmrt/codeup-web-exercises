@@ -24,6 +24,16 @@ $books = array(
 );
 
 foreach($books as $title => $book){
+	if($book['published'] >= 1950){
 	echo "{$title}:".PHP_EOL ."published in {$book['published']}". PHP_EOL . "Written by: {$book['author']}" . PHP_EOL . "Pages: {$book['pages']}" . PHP_EOL ;	
+	}
+}
 
+//or
+
+foreach($books as $title => $book){
+	echo"'$title'";
+	foreach($book as $key =. $data){
+		echo "$key - $data" . PHP_EOL;
+	}
 }
