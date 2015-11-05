@@ -17,5 +17,9 @@ foreach($things as $value){
 		foreach($value as $arrays){
 			echo "$arrays" . PHP_EOL;
 		}
+	} elseif(is_null($value)){
+		echo "NULL" . PHP_EOL;
+	} elseif(is_bool($value)){
+		echo "BOOLEAN" . PHP_EOL;
 	}
 }
