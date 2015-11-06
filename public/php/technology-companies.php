@@ -46,9 +46,13 @@ $companies = [
     ]
 ];
 
+arsort($companies);
+print_r($companies);
+
 foreach($companies as $name => $company)
 {
     sort($company);
+    print_r($company);
     print_r($company);
 }
 
