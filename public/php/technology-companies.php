@@ -46,4 +46,10 @@ $companies = [
     ]
 ];
 
+foreach($companies as $name => $company)
+{
+    sort($company);
+    print_r($company);
+}
+
 print_r($companies);
