@@ -32,8 +32,10 @@ foreach($books as $title => $book){
 //or
 
 foreach($books as $title => $book){
-	echo"'$title'";
-	foreach($book as $key =. $data){
+	echo "'$title'". PHP_EOL;
+	echo "---------------------\n";
+	foreach($book as $key => $data){
 		echo "$key - $data" . PHP_EOL;
 	}
+	echo "=====================\n\n";
 }
