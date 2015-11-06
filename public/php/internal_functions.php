@@ -2,8 +2,27 @@
 
 function inspect($a)
 {
-	echo "The " . gettype($a) . " is {$a}." . PHP_EOL;
-	echo "~ * ~ * ~ * ~ * ~ * ~ * ~ * ~";
+	if(is_integer($a)){
+		echo "{$a} is an integer." . PHP_EOL;
+	} else if (is_string($a)){
+		if($a == ''){
+			echo "The value is an empty string." . PHP_EOL;
+		} else {
+			echo "The value is a string." . PHP_EOL;
+		}
+	} else if (is_bool($a)){
+		echo "The value is boolean." . PHP_EOL;
+	} else if (is_float($a)){
+		echo "{$a} is a float." . PHP_EOL;
+	} else if (is_array($a)){
+		if($a == []){
+			echo "The value is an empty array." . PHP_EOL;
+		}else{
+			echo "The value is an array." . PHP_EOL;
+		}
+	} else if (is_null($a)){
+		echo "The value is null." . PHP_EOL;
+	}
 }
 
 // Do not mofify these variables!
