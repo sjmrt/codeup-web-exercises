@@ -46,14 +46,12 @@ $companies = [
     ]
 ];
 
-arsort($companies);
-print_r($companies);
 
-foreach($companies as $name => $company)
-{
-    sort($company);
-    print_r($company);
-    print_r($company);
+foreach($companies as $companyName => $employees)
+{    
+    sort($employees);
+    $companies[$companyName] = $employees;
 }
 
+arsort($companies);
 print_r($companies);
