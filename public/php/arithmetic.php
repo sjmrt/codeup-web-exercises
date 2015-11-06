@@ -1,77 +1,94 @@
 <?php
 
+function validateNumber($a, $b)
+{
+	return is_numeric($a) && is_numeric($b);
+}
+
+function validateNotZero($b)
+{
+	return $b == 0; 
+}
+
+function errorMessage($a, $b, $errortype)
+{
+	switch ($errortype) {
+		case 'nonNumeric':
+			echo "Error! You must enter two numbers, you entered {$a} and {$b} ";
+			break;
+		
+		case 'divideByZero':
+			echo "Error, you can't divide by zero! You entered {$a} and {$b} ";
+			break;
+
+		default:
+			echo "Error not found!";
+			break;
+	}
+}		
+
 function add($a, $b)
 {
-	if(is_numeric($a) && is_numeric($b))
-	{
+    if(validateNumber($a, $b)){
     	return $a + $b;
-    } else 
-    {
-    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
+    } else { 
+    	errorMessage($a, $b, 'nonNumeric');
     }
 }
 
 function subtract($a, $b)
 {
-	if(is_numeric($a) && is_numeric($b))
-	{
+	if(validateNumber($a, $b)){
 		return $a - $b;
-	} else 
-    {
-    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
+	} else {
+    	errorMessage($a, $b, 'nonNumeric');
     }
 }
 
 function multiply($a, $b)
 {
-	if(is_numeric($a) && is_numeric($b))
-	{
+	if(validateNumber($a, $b)){
 		return $a*$b;
-	} else 
-    {
-    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
+	} else {
+    	errorMessage($a, $b, 'nonNumeric');
     }	
 }
 
 function divide($a, $b)
 {
-	if(((is_numeric($a) && is_numeric($b))) && ($a != 0 && $b !=0))
-	{
-		return $a/$b;
-	} else 
-    {
-    	return "Error! Both arguments must be numbers not equal to zero! You entered {$a} and {$b}";
+	if(!validateNumber($a, $b)){
+		errorMessage($a, $b, 'nonNumeric');
+	} else if(validateNotZero($b)){
+		errorMessage($a, $b, 'divideByZero')
+	} else {
+    	return $a/$b;
     }
 }
 
 function modulus($a, $b)
 {
-	if(is_numeric($a) && is_numeric($b))
-	{
+	if(validateNumber($a, $b)){
 		return $a%$b;
-	} else 
-    {
-    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
+	} else {
+    	errorMessage($a, $b, 'nonNumeric');
     }
 }
 
 //solve multiply function using add function and for loop
 function addtwo($a, $b)
 {
-	if(is_numeric($a) && is_numeric($b))
-	{
+	if(validateNumber($a, $b)){
 		$sum = 0;
 		for($i = 0 ; $i<$b; $i++){
 			$sum = $sum + $a;
 		}
 		return $sum;
-	} else 
-    {
-    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
+	} else {
+    	errorMessage($a, $b, 'nonNumeric');
     }
 }
 
-echo add(6,b) . PHP_EOL;
+echo add(6,3) . PHP_EOL;
 
 echo subtract(12,3) . PHP_EOL;
 
