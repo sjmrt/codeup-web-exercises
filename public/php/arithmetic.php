@@ -7,7 +7,7 @@ function add($a, $b)
     	return $a + $b;
     } else 
     {
-    	return "Error! Both arguments must be numbers!";
+    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
     }
 }
 
@@ -18,7 +18,7 @@ function subtract($a, $b)
 		return $a - $b;
 	} else 
     {
-    	return "Error! Both arguments must be numbers!";
+    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
     }
 }
 
@@ -29,7 +29,7 @@ function multiply($a, $b)
 		return $a*$b;
 	} else 
     {
-    	return "Error! Both arguments must be numbers!";
+    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
     }	
 }
 
@@ -40,7 +40,7 @@ function divide($a, $b)
 		return $a/$b;
 	} else 
     {
-    	return "Error! Both arguments must be numbers not equal to zero!";
+    	return "Error! Both arguments must be numbers not equal to zero! You entered {$a} and {$b}";
     }
 }
 
@@ -51,7 +51,7 @@ function modulus($a, $b)
 		return $a%$b;
 	} else 
     {
-    	return "Error! Both arguments must be numbers!";
+    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
     }
 }
 
@@ -67,11 +67,11 @@ function addtwo($a, $b)
 		return $sum;
 	} else 
     {
-    	return "Error! Both arguments must be numbers!";
+    	return "Error! Both arguments must be numbers! You entered {$a} and {$b}";
     }
 }
 
-echo add(6,3) . PHP_EOL;
+echo add(6,b) . PHP_EOL;
 
 echo subtract(12,3) . PHP_EOL;
 
