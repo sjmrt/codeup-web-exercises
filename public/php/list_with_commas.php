@@ -4,13 +4,15 @@ $physicistsString = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mall
 
 $physicistsArray = explode(', ', $physicistsString);
 
+sort($physicistsArray);
+
 function humanizedList($physicistsArray)
 {
 	$output = '';
 
 	while(count($physicistsArray) > 0)
 	{
-    	$output .= array_pop($physicistsArray);
+    	$output .= array_shift($physicistsArray);
 
     	if(count($physicistsArray) > 1) 
     	{
@@ -22,6 +24,21 @@ function humanizedList($physicistsArray)
     	}
  	}
  	return $output;
+}
+
+
+function humanizedlist($array, $sort = false)
+{
+	if($sort)
+	{
+	sort($array);
+	}
+
+	$lastItem = 'and ' . array_pop($array)
+	
+	array_push($array, $lastItem);
+	$string = implode(', ', $array);
+	return $string;
 }
 
 

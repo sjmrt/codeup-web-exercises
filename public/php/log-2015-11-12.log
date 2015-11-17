@@ -1,0 +1,59 @@
+2015-11-12T17:02:38+00:00 INFO This is an info message.
+2015-11-12T17:02:38+00:00 ERROR This is an error message.
+2015-11-12T17:04:25+00:00 INFO This is an info message.
+2015-11-12T17:04:25+00:00 ERROR This is an error message.
+2015-11-12 17:07:31 INFO This is an info message.
+2015-11-12 17:07:31 ERROR This is an error message.
+2015-11-12 17:13:33 INFO This is an info message.
+2015-11-12 17:13:33 ERROR This is an error message.
+2015-11-12 17:13:33 BUTTS This is a butt message.
+2015-11-12 17:23:13 INFO This is an info message.
+2015-11-12 17:23:13 ERROR This is an error message.
+2015-11-12 17:23:13 FART This is a butt message.
+2015-11-12 17:26:13 INFO 
+2015-11-12 17:26:13 ERROR 
+2015-11-12 17:26:13 FART 
+2015-11-12 17:26:13 ERROR 
+2015-11-12 17:26:13 ERROR 
+2015-11-12 17:26:13 ERROR 
+2015-11-12 17:26:13 INFO 
+2015-11-12 17:26:13 FART 
+2015-11-12 17:27:13 INFO 
+2015-11-12 17:27:13 ERROR 
+2015-11-12 17:27:13 FART 
+2015-11-12 17:27:13 ERROR Oh no!
+2015-11-12 17:27:13 ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 17:27:13 ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 17:27:13 INFO This is how I should be using these functions.
+2015-11-12 17:27:13 FART Signed: Ben.
+2015-11-12 17:28:18 ERROR Oh no!
+2015-11-12 17:28:19 ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 17:28:19 ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 17:28:19 INFO This is how I should be using these functions.
+2015-11-12 17:28:19 FART Signed: Ben.
+2015-11-12 17:33:11:PM ERROR Oh no!
+2015-11-12 17:33:11:PM ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 17:33:11:PM ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 17:33:11:PM INFO This is how I should be using these functions.
+2015-11-12 17:33:11:PM FART Signed: Ben.
+2015-11-12 17:34:19:PM ERROR Oh no!
+2015-11-12 17:34:19:PM ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 17:34:19:PM ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 17:34:19:PM INFO This is how I should be using these functions.
+2015-11-12 17:34:19:PM FART Signed: Ben.
+2015-11-12 17:35:30:PM ERROR Oh no!
+2015-11-12 17:35:30:PM ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 17:35:30:PM ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 17:35:30:PM INFO This is how I should be using these functions.
+2015-11-12 17:35:30:PM FART Signed: Ben.
+2015-11-12 11:36:18:AM ERROR Oh no!
+2015-11-12 11:36:18:AM ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 11:36:18:AM ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 11:36:18:AM INFO This is how I should be using these functions.
+2015-11-12 11:36:18:AM FART Signed: Ben.
+2015-11-12 11:43:14:AM ERROR Oh no!
+2015-11-12 11:43:14:AM ERROR I can't pass an arbitrary message to logError()!
+2015-11-12 11:43:14:AM ERROR That makes the function somewhat limited, don't you think?
+2015-11-12 11:43:14:AM INFO This is how I should be using these functions.
+2015-11-12 11:43:14:AM FART Signed: Ben.
+2015-11-12 11:43:14:AM FART ( ' | ' )
