@@ -1,18 +1,18 @@
 <?php
 
-require_once('functions.php');
+require_once('../../Input.php');
 
 function pageController()
 {
-	if(inputHas('game-over')){
-		$gameOver = inputGet('game-over');
+	if(Input::has('game-over')){
+		$gameOver = Input::get('game-over');
 
 		return [
 		'gameOver' => $gameOver
 		];
 	}
 
-	$counter = inputHas('counter') ? inputGet('counter') : 0;
+	$counter = Input::has('counter') ? Input::get('counter') : 0;
 	$hit = $counter + 1;
 	$miss = $counter;
 

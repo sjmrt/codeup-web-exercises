@@ -5,8 +5,6 @@ function inputHas($key)
 	if(isset($_REQUEST[$key])){
 		return true;
 	}
-		return false;
-
 } 
 
 function inputGet($key)
