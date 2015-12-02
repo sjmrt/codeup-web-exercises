@@ -1,27 +1,28 @@
 <?php
 
 require_once('functions.php');
+require_once('../../Auth.php');
+require_once('../../Input.php');
+
 session_start();
 
 $message = '';
 $username = '';
 
-if(isset($_SESSION['LOGGED_IN_USER'])){
+if(Auth::check()){
 	header("Location: authorized.php");
 	die();
 }
 
-if(inputHas('username') && inputHas('password')){
-	$username = escape(inputGet('username'));
-	$password = escape(inputGet('password'));
+if((Input::get('username')) && Input::get('password')){
+	$log = new Log();
 
-	if($username == 'sj' && $password =='kitty'){
-		$_SESSION['LOGGED_IN_USER'] = $username;
+	if(Auth::attempt(inputGet('username'), inputGet('password')) == true){
+		$log->info('User ' . $username . ' logged in.');
 		header("Location: authorized.php");
 		die();	
-	} else {
-		$message = "Please enter a valid username and password";
 	}
+		$log->error('User ' . $username . ' failed to log in!');
 }
 
 ?>

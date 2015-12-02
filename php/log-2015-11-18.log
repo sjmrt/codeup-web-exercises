@@ -1,0 +1,27 @@
+2015-11-18 09:49:23:AM [INFO] This is for INFO
+2015-11-18 09:49:23:AM [ERROR] This is for ERROR
+2015-11-18 09:49:41:AM [INFO] This is for INFO
+2015-11-18 09:49:41:AM [ERROR] This is for ERROR
+2015-11-18 20:19:15:PM [ERROR] User  failed to log in!
+2015-11-18 20:19:19:PM [INFO] User guest logged in.
+2015-11-18 20:19:19:PM [ERROR] User guest failed to log in!
+2015-11-18 20:20:50:PM [ERROR] User  failed to log in!
+2015-11-18 20:20:54:PM [INFO] User guest logged in.
+2015-11-18 20:20:57:PM [ERROR] User  failed to log in!
+2015-11-18 20:28:28:PM [ERROR] User  failed to log in!
+2015-11-18 20:28:35:PM [INFO] User guest logged in.
+2015-11-18 20:28:44:PM [ERROR] User  failed to log in!
+2015-11-18 20:31:02:PM [ERROR] User  failed to log in!
+2015-11-18 20:31:07:PM [INFO] User guest logged in.
+2015-11-18 20:31:07:PM [ERROR] User guest failed to log in!
+2015-11-18 20:45:28:PM [INFO] User  logged in.
+2015-11-18 20:53:45:PM [ERROR] User  failed to log in!
+2015-11-18 20:54:07:PM [INFO] User  logged in.
+2015-11-18 20:56:14:PM [INFO] User  logged in.
+2015-11-18 21:28:44:PM [ERROR] User  failed to log in!
+2015-11-18 21:29:06:PM [ERROR] User  failed to log in!
+2015-11-18 21:31:08:PM [INFO] User guest logged in.
+2015-11-18 21:31:33:PM [ERROR] User  failed to log in!
+2015-11-18 21:32:15:PM [ERROR] User  failed to log in!
+2015-11-18 21:36:14:PM [ERROR] User asdfghj failed to log in!
+2015-11-18 21:36:30:PM [INFO] User guest logged in.

@@ -7,7 +7,7 @@ function logMessage($logLevel, $message)
 	$date = date("Y-m-d");
 	$dateAndTime = date("Y-m-d H:i:s:A");
 	$filename = "log-{$date}.log";
-	$handle = fopen($filename, 'a');
+	$handle = fopen($this->$filename, 'a');
     fwrite($handle, "{$dateAndTime} [{$logLevel}] {$message}" . PHP_EOL);
     fclose($handle);    
 }

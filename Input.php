@@ -13,6 +13,7 @@ class Input
         if(isset($_REQUEST[$key])){
             return true;
         }
+        return false;
     }
 
     /**
@@ -27,7 +28,7 @@ class Input
         if(self::has($key)){
             return $_REQUEST[$key];
         } 
-            return null;
+        return $default;
     }
 
     ///////////////////////////////////////////////////////////////////////////
