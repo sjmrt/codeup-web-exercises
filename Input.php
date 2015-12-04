@@ -16,6 +16,13 @@ class Input
         return false;
     }
 
+    public static function notEmpty($key)
+    {
+        if(isset($_REQUEST[$key]) && $_REQUEST[$key] != ''){
+            return true;
+        }
+    }
+
     /**
      * Get a requested value from either $_POST or $_GET
      *
