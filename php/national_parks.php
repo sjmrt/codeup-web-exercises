@@ -30,13 +30,14 @@ $parks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<?php 
 		foreach($parks as $park): ?>
 			<tr>
-				<th><?= $park['name'] ?></th>
-				<th><?= $park['location'] ?></th>
-				<th><?= $park['area_in_acres'] ?></th>
-				<th><?= $park['date_established'] ?></th>
+				<td><?= $park['url'] ?>asdf<?= $park['name'] ?></td>
+				<td><?= $park['location'] ?></td>
+				<td><?= $park['area_in_acres'] ?></td>
+				<td><?= $park['date_established'] ?></td>
 			</tr>
 		<?php endforeach ?> 
 	</table>
-
+	<a href=""> NEXT </a>
+	<a href="">PREVIOUS</a>
 </body>
 </html>

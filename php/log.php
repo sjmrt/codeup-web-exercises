@@ -2,14 +2,14 @@
 
 class Log
 {
-	public $handle = '';
-	public $filename = '';
+	protected $handle = '';
+	protected $filename = '';
 
 	public function __construct($prefix = 'log')
 	{
 		$today = date('Y-m-d');
 		$this->filename = "{$prefix}-{$today}.log";
-		$this->handle = fopen($this->filename, 'a');
+		$this->handle = fopen($this->filename, 'a+');
 	}
 	
 	public function logMessage($logLevel, $message)
@@ -32,4 +32,15 @@ class Log
 	{
 	    fclose($this->handle); 
 	}
+
+	protected function setHandle()
+	{
+
+	}
+	
+	protected function setFilename()
+	{
+
+	}
+
 }
