@@ -25,12 +25,12 @@ $errorMessage = "Add a Park!";
 
 if(!empty($_POST))
 {
-	if (Input::notEmpty('name') &&
-		Input::notEmpty('url') && 
-		Input::notEmpty('location') && 
-		Input::notEmpty('date_established') && 
-		Input::notEmpty('area_in_acres') && 
-		Input::notEmpty('description')
+	if (Input::getString('name') &&
+		Input::getString('url') && 
+		Input::getString('location') && 
+		Input::getDate('date_established') && 
+		Input::getNumber('area_in_acres') && 
+		Input::getString('description')
 	){
 		$newPark = $dbc->prepare("INSERT INTO national_parks(name, url, location, date_established, area_in_acres, description) 
 		VALUES(:name, :url, :location, :date_established, :area_in_acres, :description)");

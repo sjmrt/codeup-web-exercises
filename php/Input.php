@@ -43,22 +43,12 @@ class Input
         return htmlspecialchars(strip_tags($input));
     } 
 
-    ///////////////////////////////////////////////////////////////////////////
-    //                      DO NOT EDIT ANYTHING BELOW!!                     //
-    // The Input class should not ever be instantiated, so we prevent the    //
-    // constructor method from being called. We will be covering private     //
-    // later in the curriculum.                                              //
-    ///////////////////////////////////////////////////////////////////////////
-    private function __construct() {}
-
     public static function getString($key)
     {
         $value = trim(static::get($key));
-        // $isString = settype($value, 'string');
         if(!isset($value)){
              throw new Exception('Input must not be null!');
         }
-        // Check if value is a string
         if (!is_string($_REQUEST[$key])) {
             throw new Exception('Input must be a string!');
         }
@@ -72,7 +62,6 @@ class Input
         if(!isset($value)){
             throw new Exception('Input must not be a null!');
         }
-        // Check if value is a string
         if (!is_numeric($_REQUEST[$key])) {
             throw new Exception('Input must be a number!');
         }
@@ -91,4 +80,12 @@ class Input
             throw new Exception('Input must be a valid date!');
         }
     }
+    ///////////////////////////////////////////////////////////////////////////
+    //                      DO NOT EDIT ANYTHING BELOW!!                     //
+    // The Input class should not ever be instantiated, so we prevent the    //
+    // constructor method from being called. We will be covering private     //
+    // later in the curriculum.                                              //
+    ///////////////////////////////////////////////////////////////////////////
+    private function __construct() {}
+
 }
